@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="project1.css">
+        <title> WEATHER APP</title>
+
+    </head>
+    <body>
+        <div class="container">
+           <div class="search"> <input type="text" id="city" placeholder="enter city name" >
+            <button><img src="images/search.png" alt=""></button>
+            </div>
+
+            <div class="weather"> 
+                <img src="images/rain.png" class="weathericon">
+                <h1 class="temp">22°c</h1>
+                <h2 class="city">NEW YORK</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png">
+                    <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/wind.png">
+             <div>
+                         <p class="wind">15kmph</p>
+                     <p>wind speed</p>
+                 </div>
+         </div>
+    
+            
+
+
+
+
+
+             </div>
+
+        </div>
+        <script>
+            const apiKey = 'e9ab6010ea00cd305a7faedeb79b746c';
+            const apiUrl =` https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+            async function checkWeather(){
+                const response =await fetch(apiUrl);
+                var data=await response.json();
+                console.log(data);
+               
+
+            }
+            checkWeather();
+
+
+        </script>
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
