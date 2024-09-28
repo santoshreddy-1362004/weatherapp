@@ -1,12 +1,12 @@
 body{
-    background-image: url(images/image.png);
-    background-repeat: no-repeat;
+    background-color:#2d545e;
     background-size: cover;
 
 }
 .container{
-    width: 90%;
+    width: 100%;
     max-width: 470px;
+
     background:linear-gradient(135deg,#00feba,#5b548a);
     text-align: center;
     color:#fff;
